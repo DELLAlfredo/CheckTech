@@ -13,6 +13,24 @@
         android:theme="@style/Theme.Checktech"
         tools:targetApi="31">
         <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Reporte"
+            android:exported="false" />
+        <activity
+            android:name=".clases"
+            android:exported="false" />
+        <activity
+            android:name=".abcAula"
+            android:exported="false" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
+            android:name=".abcDocentes"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
