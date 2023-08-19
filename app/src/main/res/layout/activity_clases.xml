@@ -17,21 +17,24 @@
 
         android:layout_marginTop="24dp"
         android:background="@drawable/customspiner"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
         android:id="@+id/SpHORA"
         android:layout_width="273dp"
         android:layout_height="50dp"
-        android:layout_marginTop="44dp"
         android:background="@drawable/customspiner"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toEndOf="@+id/SpAula"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/SpAula"
 
-        app:layout_constraintTop_toBottomOf="@+id/SpAula" />
+        app:layout_constraintStart_toStartOf="@+id/SpAula"
+        app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <TextView
         android:id="@+id/textView3"
@@ -77,13 +80,14 @@
         android:layout_width="291dp"
         android:layout_height="42dp"
 
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:text="OPCION DE CLASE:"
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SpDocente" />
+        app:layout_constraintTop_toTopOf="@+id/guideline27" />
 
     <TextView
         android:id="@+id/textView8"
@@ -110,13 +114,12 @@
         android:id="@+id/SpDocente"
         android:layout_width="246dp"
         android:layout_height="44dp"
-        android:layout_marginTop="40dp"
         android:background="@drawable/customspiner"
         app:layout_constraintEnd_toEndOf="@+id/SpHORA"
         app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="@+id/SpHORA"
 
-        app:layout_constraintTop_toBottomOf="@+id/SpHORA" />
+        app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <Spinner
         android:id="@+id/SpAction"
@@ -129,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline26" />
 
     <Button
         android:id="@+id/btnguardarclase"
@@ -154,5 +157,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.17099863" />
+        app:layout_constraintGuide_percent="0.11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24213406" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57729137" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4623803" />
 </androidx.constraintlayout.widget.ConstraintLayout>

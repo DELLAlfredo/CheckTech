@@ -17,15 +17,15 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String TABLE_CARRERA = "t_carrera";
     public static final String TABLE_ACADEMIA = "t_academia";
     public static final String TABLE_USER = "t_user";
-    public static  final  String TABLE_ChequeoClases ="chequeo_clases";
+    public static  final  String TABLE_ChequeoClases ="cheque_clases";
 
 
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public DbHelper(@Nullable Context abcMaestros, @Nullable String POS, @Nullable SQLiteDatabase.CursorFactory factory, int DATABASE_VERSION) {
-        super(abcMaestros, POS, factory, DATABASE_VERSION);
+    public DbHelper(@Nullable Context abcDocentes, @Nullable String POS, @Nullable SQLiteDatabase.CursorFactory factory, int DATABASE_VERSION) {
+        super(abcDocentes, POS, factory, DATABASE_VERSION);
 
     }
 
