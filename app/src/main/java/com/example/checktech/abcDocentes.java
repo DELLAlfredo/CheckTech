@@ -1,19 +1,9 @@
 package com.example.checktech;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.checktech.databinding.ActivityAbcDocentesBinding;
-import com.example.checktech.databinding.ActivityClasesBinding;
-
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.checktech.databinding.ActivityAbcDocentesBinding;
 import com.example.checktech.db.DbHelper;
 
 public class abcDocentes extends menu {

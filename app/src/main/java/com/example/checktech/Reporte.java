@@ -2,7 +2,6 @@ package com.example.checktech;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.checktech.databinding.ActivityAbcAulaBinding;
 import com.example.checktech.databinding.ActivityReporteBinding;
 import com.example.checktech.db.DbHelper;
 

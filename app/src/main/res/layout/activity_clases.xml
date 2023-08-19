@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     android:background="@drawable/f4"
-    tools:context=".chequeoClases">
+    tools:context=".clases">
 
     <Spinner
         android:id="@+id/SpAula"
