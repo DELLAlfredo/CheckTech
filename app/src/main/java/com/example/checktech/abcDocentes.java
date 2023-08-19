@@ -3,6 +3,9 @@ package com.example.checktech;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.checktech.databinding.ActivityAbcDocentesBinding;
+import com.example.checktech.databinding.ActivityClasesBinding;
+
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,7 +23,8 @@ import android.widget.Toast;
 
 import com.example.checktech.db.DbHelper;
 
-public class abcDocentes extends AppCompatActivity {
+public class abcDocentes extends menu {
+    ActivityAbcDocentesBinding activityAbcDocentesBinding;
     EditText txtNombre,txtApellidos, txtId;
     Button btnGuardar;
 
@@ -29,7 +33,8 @@ public class abcDocentes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abc_docentes);
+        activityAbcDocentesBinding = ActivityAbcDocentesBinding.inflate(getLayoutInflater());
+        setContentView(activityAbcDocentesBinding.getRoot());
         txtNombre = findViewById(R.id.txtNombre);
         txtApellidos = findViewById(R.id.txtApellidos);
         txtId = findViewById(R.id.txtId);

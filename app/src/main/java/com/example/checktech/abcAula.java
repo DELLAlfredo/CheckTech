@@ -1,6 +1,7 @@
 package com.example.checktech;
 
 import static android.graphics.Insets.add;
+import com.example.checktech.databinding.ActivityAbcAulaBinding;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,18 +21,20 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.checktech.databinding.ActivityAbcDocentesBinding;
 import com.example.checktech.db.DbHelper;
 
 
-public class abcAula extends AppCompatActivity {
-
+public class abcAula extends menu {
+ActivityAbcAulaBinding activityAbcAulaBinding;
     EditText edNombreAula,edIDAula;
     Spinner spinerAula;
     Button btnAceptarAu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abc_aula);
+        activityAbcAulaBinding = ActivityAbcAulaBinding.inflate(getLayoutInflater());
+        setContentView(activityAbcAulaBinding.getRoot());
 
         edNombreAula = findViewById(R.id.edNombreAula);
         edIDAula = findViewById(R.id.edIDAula);
