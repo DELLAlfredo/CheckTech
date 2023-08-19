@@ -2,6 +2,7 @@ package com.example.checktech;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +34,7 @@ public class Login extends AppCompatActivity {
                 String pass = contraseña.getText().toString();
                 if (email.getText().toString().equalsIgnoreCase(Usuario) && contraseña.getText().toString().equalsIgnoreCase(Paswword)) {
                     Toast.makeText(getApplicationContext(), "Ha iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Login.this, clases.class);  //Creamos el intent y le indicamos desde donde vamos (this) y a donde vamos (OtraActividad.class)
+                    Intent intent = new Intent(Login.this, abcAula.class);  //Creamos el intent y le indicamos desde donde vamos (this) y a donde vamos (OtraActividad.class)
                     startActivity(intent);  //Abrimos la otra actividad
                 } else {
                     email.setError("Ingresa tu nombre de usuario correcto");
