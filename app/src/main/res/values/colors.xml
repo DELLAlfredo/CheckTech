@@ -27,6 +27,8 @@
     <color name="colorsuspencion">#FB8C00</color> <!-- Red color for no suspencion -->
     <color name="tabla">#33B5E5</color>
     <color name="ButtonGuardar">#43A047</color>
+    <color name="campostabla">#C5C5C5</color>
+
 
 
 </resources>

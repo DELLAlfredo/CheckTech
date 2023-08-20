@@ -43,29 +43,31 @@ public class menu extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        drawerLayout.closeDrawer(GravityCompat.START);
-        if (item.getItemId()== R.id.nav_Aulas)
-        {
+        drawerLayout.closeDrawer(GravityCompat.START); // Cierra el cajón de navegación
+
+        if (item.getItemId() == R.id.nav_Aulas) {
             Intent intent = new Intent(getApplicationContext(), abcAula.class);
             startActivity(intent);
-        }else if (item.getItemId()== R.id.nav_Docentes) {
+        } else if (item.getItemId() == R.id.nav_Docentes) {
             Intent intent = new Intent(getApplicationContext(), abcDocentes.class);
             startActivity(intent);
-        }else if (item.getItemId()== R.id.nav_Clases) {
+        } else if (item.getItemId() == R.id.nav_Clases) {
             Intent intent = new Intent(getApplicationContext(), clases.class);
             startActivity(intent);
-        }else if (item.getItemId()== R.id.logout) {
-            SharedPreferences preferences =getSharedPreferences("PreferenciasLogin", Context.MODE_PRIVATE);
+        } else if (item.getItemId() == R.id.logout) {
+            SharedPreferences preferences = getSharedPreferences("PreferenciasLogin", Context.MODE_PRIVATE);
             preferences.edit().clear().commit();
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
             finish();
-        }else if (item.getItemId()== R.id.nav_Reporte_Semanal ){
+        } else if (item.getItemId() == R.id.nav_Reporte_Semanal) {
             Intent intent = new Intent(getApplicationContext(), Reporte.class);
             startActivity(intent);
         }
-        return false;
+
+        return true; // Devuelve true si el ítem fue manejado correctamente
     }
+
     protected  void  allocateActivityTitle(String titleString){
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(titleString);

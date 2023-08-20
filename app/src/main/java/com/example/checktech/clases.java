@@ -35,6 +35,7 @@ public class clases extends menu {
         super.onCreate(savedInstanceState);
         activityClasesBinding = ActivityClasesBinding.inflate(getLayoutInflater());
         setContentView(activityClasesBinding.getRoot());
+        allocateActivityTitle("Clases");
 
         AulaValues = new ArrayList<>();
         DocenteValues = new ArrayList<>();

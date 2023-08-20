@@ -26,6 +26,8 @@ public class abcDocentes extends menu {
         super.onCreate(savedInstanceState);
         activityAbcDocentesBinding = ActivityAbcDocentesBinding.inflate(getLayoutInflater());
         setContentView(activityAbcDocentesBinding.getRoot());
+        allocateActivityTitle("Docentes");
+
         txtNombre = findViewById(R.id.txtNombre);
         txtApellidos = findViewById(R.id.txtApellidos);
         txtId = findViewById(R.id.txtId);

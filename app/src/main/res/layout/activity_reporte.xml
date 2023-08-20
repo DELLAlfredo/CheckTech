@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Reporte"
-    android:background="@drawable/f4"
-    >
+    android:background="@drawable/f4">
 
 
     <Spinner
@@ -26,12 +25,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.21" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="410dp"
+        android:layout_height="379dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,17 +41,17 @@
 
         <ScrollView
             android:id="@+id/scrollvertical"
-            android:layout_width="wrap_content"
+            android:layout_width="391dp"
             android:layout_height="wrap_content"
-            android:scrollbars="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:scrollbars="vertical">
 
             <HorizontalScrollView
+                android:id="@+id/scrollhorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/scrollhorizontal"
-                android:scrollbars="horizontal"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:scrollbars="horizontal">
 
                 <TableLayout
                     android:id="@+id/tabla"
@@ -191,14 +190,15 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/customspiner"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
+        app:layout_constraintEnd_toEndOf="@+id/BtnCalendario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etfecha"
         app:layout_constraintVertical_bias="0.0" />
 
     <DatePicker
         android:id="@+id/dtfecha"
-        android:layout_width="407dp"
-        android:layout_height="393dp"
+        android:layout_width="394dp"
+        android:layout_height="355dp"
         android:layout_marginBottom="108dp"
         android:background="@color/white"
 
@@ -210,7 +210,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button

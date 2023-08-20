@@ -35,6 +35,7 @@ ActivityAbcAulaBinding activityAbcAulaBinding;
         super.onCreate(savedInstanceState);
         activityAbcAulaBinding = ActivityAbcAulaBinding.inflate(getLayoutInflater());
         setContentView(activityAbcAulaBinding.getRoot());
+        allocateActivityTitle("Aulas");
 
         edNombreAula = findViewById(R.id.edNombreAula);
         edIDAula = findViewById(R.id.edIDAula);

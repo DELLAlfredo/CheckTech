@@ -17,7 +17,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String TABLE_CARRERA = "t_carrera";
     public static final String TABLE_ACADEMIA = "t_academia";
     public static final String TABLE_USER = "t_user";
-    public static  final  String TABLE_ChequeoClases ="cheque_clases";
+    public static  final  String TABLE_ChequeoClases ="chequeo_clases";
 
 
     public DbHelper(Context context) {
@@ -26,7 +26,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     public DbHelper(@Nullable Context abcDocentes, @Nullable String POS, @Nullable SQLiteDatabase.CursorFactory factory, int DATABASE_VERSION) {
         super(abcDocentes, POS, factory, DATABASE_VERSION);
-
     }
 
 
@@ -59,8 +58,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id_chequeo_clase INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "+
                 "nombreAula TEXT NOT NULL,"
                 +"nombreDocente TEXT NOT NULL,"
-                +"Hora TEXT NOT NULL,"+"" +
-                "Accion TEXT NOT NULL)");
+                +"Hora TEXT NOT NULL,"
+                +"Accion TEXT NOT NULL)");
     }
 
 

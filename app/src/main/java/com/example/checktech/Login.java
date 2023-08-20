@@ -14,11 +14,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.checktech.db.DbHelper;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class Login extends AppCompatActivity {
     EditText email,contraseña;
-    Button loginButton;
+    Button loginButton,booton;
     String Paswword = "123";
     String Usuario = "root";
     private Object backgroundTint;
@@ -30,7 +31,17 @@ public class Login extends AppCompatActivity {
         email = findViewById(R.id.email);
         contraseña = findViewById(R.id.contraseña);
         loginButton = findViewById(R.id.loginButton);
+        booton=findViewById(R.id.button);
         recuperarPreferencias();
+
+
+        booton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eliminarBaseDeDatos();
+
+            }
+        });
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,5 +105,21 @@ public class Login extends AppCompatActivity {
         SharedPreferences preferences=getSharedPreferences("PreferenciasLogin",Context.MODE_PRIVATE);
         email.setText(preferences.getString("email",""));
         contraseña.setText(preferences.getString("contraseña",""));
+    }
+
+
+    private void eliminarBaseDeDatos() {
+        // Crea una instancia de la clase SQLiteOpenHelper
+        DbHelper dbHelper = new DbHelper(this);
+
+        // Elimina la base de datos utilizando deleteDatabase()
+        boolean eliminada = this.deleteDatabase(dbHelper.getDatabaseName());
+
+        // Verifica si se eliminó la base de datos correctamente
+        if (eliminada) {
+            Toast.makeText(this, "Base de datos eliminada correctamente", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No se pudo eliminar la base de datos", Toast.LENGTH_SHORT).show();
+        }
     }
     }
